@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DVRPC > Economic Development</title>
+	<meta name="Created" content="2022-02" >
+	<meta name="Description" content="Economic Development information in the DVRPC region." >
+	<meta name="Keywords" content="Economic Development, DVRPC, Delaware Valley Regional Planning Commission, Regional Planning" >
+	<meta name="Author" content="Delaware Valley Regional Planning Commission (DVRPC)" >
+	<meta name="Owner" content="webmaster@dvrpc.org" >
+	<meta name="Distribution" content="global" >
+	<meta name="Robots" content="index, follow" >
+	<meta name="Copyright" content="1995-2022 all rights reserved">
+
+	<!-- DVRPC Website VERSION #7.0 Copyright (c) 1995-2018 Delaware Valley Regional Planning Commission. All rights reserved.  -->
+	<link rel="SHORTCUT ICON" href="/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="DVRPC Announcements" href="http://feeds.feedburner.com/DVRPCAnnouncements">
+    <link rel="stylesheet" type="text/css" href="/css/subpage.css">
+
+    <!-- charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script type="module" defer src="./js/index.js"></script>
+    <style>
+        .chart-wrapper {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+        }
+        .chart-title {
+            text-align: center;
+            padding-top: 10px;
+            margin-bottom: 0;
+        }
+        .chart-subtitle {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+        .overflow {
+            overflow-x: auto;
+        }
+        .centered {
+            text-align: center;
+        }
+        .first-row {
+            display: block;
+            width: 20ch;
+            font-weight: 700;
+            border-left: none;
+        }
+        td {
+            border-left: 1px solid #ddd;
+        }
+        .industry-cell {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<div id="leftHandWrap">
+<div id="rightHandWrap">
+<div id="subMenuItem"></div>
+<div id="topCurves" class="topCBodyTL"></div>
+<div id="header"></div>
+<div class="navDividerTop"></div>
+<div id="topBodyCurves" class="topBodyTL">
+<div class="topBodyB"></div>
+<div class="topBodyTR"></div>
+</div>
+<div id="bodyWrap">
+<div id="body">
+<div id="mainColumn" class="mainColumn fleft">
+<div id="mainCenterWrapper"></div>
+<div id="mainWrapper">
+<div id="mainContent">
+    <h1>Economic Development</h1>
+
+    <p class="pre">
+        Greater Philadelphia is a large complex region, covering portions of two states, with hundreds of municipalities responsible for individual development and land use decisions.  The region’s economy is similarly diverse with dozens of public– and private– sector organizations seeking to promote or attract a wide variety of sectors and specific interests.  DVRPC’s process and strategy strives to address all the opportunities and challenges that the region faces. 
+    </p>
+
+    <p>
+        While each county and municipality approaches economic development differently, we are all united in advancing common goals: investing in their people, creating attractive places, and supporting businesses.  Continued coordination across states lines, city and county boundaries, employment sectors, and public and private sectors is essential to maintain a regional perspective and shared vision, goals and objectives.
+    </p>
+
+    <p>
+        The strategy has three big goals: open economic opportunities to everyone; compete globally; and sustain a high quality of life.  Each goal is supported by specific strategies and initiatives to sustain and grow jobs throughout the region, at the regional and local level. 
+    </p>
+
+    <p>
+        The strategy emphasizes traditional economic development priorities such as transportation, education, international trade and the region’s business climate. Newer emphasis areas include a local revitalization strategies, workforce development and advancing social equity and diversity.   
+    </p>
+
+    <p>
+        DVRPC manages the regional Comprehensive Economic Development Strategy (CEDS) for the Greater Philadelphia region, satisfying provisions of the United States Economic Development Administration (EDA). The Greater Philadelphia Economic Development Framework was formally approved by the EDA as the regional CEDS on September 30, 2009.
+    </p>
+
+    <hr />
+
+    <h2>DVRPC Region Economic Update – December 2021</h2>
+
+    <p>
+        In October, over-the-year employment increased by 88,800 jobs (3.2 percent) in the Philadelphia-Camden-Wilmington (Philadelphia) Metropolitan Statistical Area (MSA) and 10,300 jobs (3.8 percent) in the Trenton-Mercer County Area. Comparatively, national over-the-year employment increased by 3.9 percent. The largest employment percentage increase was in the <em>Leisure and Hospitality</em> industry for both areas: in the Philadelphia MSA, the industry added 23,100 jobs (+11.5 percent) and in Trenton, the industry added 1,500 jobs (+15.2 percent). The unemployment rate declined once again in both areas, going from 5.7 percent in September to 5.1 percent in the Philadelphia MSA and 5.1 percent in September to 4.4 percent in Trenton. This matches the trend nationally as the unemployment rate went from 4.6 percent in September to 4.3 percent in October. The inflation rate in the Philadelphia MSA is up 5.6 percent from last year, compared to 6.2 percent nationally. In October, the DVRPC region authorized 1,097 new housing units, resulting in 15,927 authorized new housing units in the region since January.
+    </p>
+
+    <small>hover over chart elements for specific values</small><br />
+    <small>toggle chart data by clicking legend icons</small>
+    <br />
+    <br />
+
+    <div class="chart-wrapper">
+        <h3 class="chart-title">Over-the-Year Inflation Rate Philadelphia MSA and U.S.</h3>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics</h4>
+        <canvas id="inflation-chart" class="chart"></canvas>
+    </div>
+
+    <hr />
+
+    <div class="chart-wrapper">
+        <h3 class="chart-title">Unemployment Rate</h3>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics</h4>
+        <canvas id="unemployment-chart" class="chart"></canvas>
+    </div>
+
+    <hr />
+
+    <div class="chart-wrapper">
+        <h3 class="chart-title">New Housing Units Authorized by Month</h3>
+        <h4 class="chart-subtitle">Source: U.S. Census Bureau</h4>
+        <canvas id="housing-chart" class="chart"></canvas>
+    </div>
+
+    <hr />
+
+    <div class="chart-wrapper">
+        <h3 class="chart-title">Philadelphia and Trenton MSAs At-Place Employment by Industry Group,</h3>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
+
+        <!-- at-place employment -->
+        <div class="overflow">
+            <table class="table">
+                <thead>
+                    <th></th>
+                    <th colspan="4" class="centered">Philadelphia MSA</th>
+                    <th colspan="4" class="centered">Trenton MSA</th>
+                </thead>
+
+                <tbody id="employment-table-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- over-year-employment -->
+    <div class="chart-wrapper">
+        <h3 class="chart-title">One-Year Employment Change by Industry Group, </h3>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
+        <canvas id="employmentYear-chart" class="chart"></canvas>
+    </div>
+
+    <hr />
+
+    <!-- two-year employment -->
+    <div class="chart-wrapper">
+        <h3 class="chart-title">Two-Year Employment Change by Industry Group, </h3>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
+        <canvas id="employmentTwoYear-chart" class="chart"></canvas>
+    </div>
+
+    <hr />
+
+    <h2>Notes</h2>
+
+    <a href="./xls/EconomicUpdate_FigureData_20220105.xlsx">Download chart data</a>
+    
+    <h3>Geographies</h3>
+    <p>Metropolitan Statistical Area (MSA): An MSA is an area with at least one urban core and 50,000 total inhabitants. Each MSA is made up of one or more counties. The Philadelphia-Camden-Wilmington MSA (Philadelphia MSA) is comprised of Bucks, Chester, Delaware, Montgomery, and Philadelphia County in Pennsylvania; Burlington, Camden, Gloucester, and Salem County in New Jersey; New Castle County in Delaware; and Cecil County in Maryland. The Trenton-Princeton MSA is comprised of Mercer County in New Jersey.</p>
+    <p>Use of MSA instead of counties in region: depending on the data source and its variables, some data is not available at the county level. When this is the case, we use the MSA-level data as a proxy for the DVRPC region. Additionally, since the Trenton-Princeton MSA is relatively small, there are times where data is not available for this geography, and in those cases we only show the Philadelphia MSA data.</p>
+
+    <h3>Terms</h3>
+    <p>Over-the-year: change from one year to the other. For example, the change in industry employment from October 2020 to October 2021.</p>
+    <p>New Housing Units Authorized: these are development projects that have received permits but have not yet been built.</p>
+</div>
+</div>
+</div>
+<!-- column for left hand navigation -->
+<div id="navColumn" class="sideColumn fleft">
+<div class="columnWrapper"></div>
+</div>
+<!-- The column containing all of the widgets -->
+<div id="widgetColumn" class="sideColumn fleft">
+<div class="columnWrapper"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/homepage/subpage.js"></script>
+<script type="text/javascript">
+	//Bread crumb format will change  
+	var crumbs = [{"link": "Home", "href": "/"},{"link": "Economic Development", "href":"#"}];
+	makeBreadCrumbs(crumbs);
+	
+	//STAFF CONTACT HERE
+	getStaffInfo("kpcilurso");
+</script>
+</body>
+</html>
