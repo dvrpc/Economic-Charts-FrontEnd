@@ -25,16 +25,17 @@
             background-color: white;
             border-radius: 5px;
             box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+            padding: 5px;
         }
         .chart-title {
             text-align: center;
-            padding-top: 10px;
-            margin-bottom: 0;
+            margin: 5px 0;
         }
         .chart-subtitle {
             text-align: center;
+            font-size: 0.75rem;
+            padding-top: 5px;
             margin: 0;
-            padding-bottom: 10px;
             font-weight: 500;
         }
         .overflow {
@@ -48,6 +49,9 @@
             width: 20ch;
             font-weight: 700;
             border-left: none;
+        }
+        .table {
+            margin: 0;
         }
         td {
             border-left: 1px solid #ddd;
@@ -111,33 +115,31 @@
 
     <div class="chart-wrapper">
         <h3 class="chart-title">Over-the-Year Inflation Rate Philadelphia MSA and U.S.</h3>
-        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics</h4>
         <canvas id="inflation-chart" class="chart"></canvas>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics</h4>
     </div>
 
     <hr />
 
     <div class="chart-wrapper">
         <h3 class="chart-title">Unemployment Rate</h3>
-        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics</h4>
         <canvas id="unemployment-chart" class="chart"></canvas>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics</h4>
     </div>
 
     <hr />
 
     <div class="chart-wrapper">
         <h3 class="chart-title">New Housing Units Authorized by Month</h3>
-        <h4 class="chart-subtitle">Source: U.S. Census Bureau</h4>
         <canvas id="housing-chart" class="chart"></canvas>
+        <h4 class="chart-subtitle">Source: U.S. Census Bureau</h4>
     </div>
 
     <hr />
 
     <div class="chart-wrapper">
         <h3 class="chart-title">Philadelphia and Trenton MSAs At-Place Employment by Industry Group,</h3>
-        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
 
-        <!-- at-place employment -->
         <div class="overflow">
             <table class="table">
                 <thead>
@@ -151,6 +153,8 @@
                 </tbody>
             </table>
         </div>
+
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
     </div>
 
     <hr />
@@ -158,8 +162,8 @@
     <!-- over-year-employment -->
     <div class="chart-wrapper">
         <h3 class="chart-title">One-Year Employment Change by Industry Group, </h3>
-        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
         <canvas id="employmentYear-chart" class="chart"></canvas>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
     </div>
 
     <hr />
@@ -167,8 +171,8 @@
     <!-- two-year employment -->
     <div class="chart-wrapper">
         <h3 class="chart-title">Two-Year Employment Change by Industry Group, </h3>
-        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
         <canvas id="employmentTwoYear-chart" class="chart"></canvas>
+        <h4 class="chart-subtitle">Source: Bureau of Labor Statistics, Not Seasonally Adjusted</h4>
     </div>
 
     <hr />
