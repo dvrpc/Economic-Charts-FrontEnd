@@ -23,7 +23,7 @@ const formatDate = value => {
     const month = dateLookup[valArr[1]]
     const year = valArr[0]
 
-    return `${month}, ${year}`
+    return `${month} ${year}`
 }
 
 const chartMeta = {
@@ -34,8 +34,9 @@ const chartMeta = {
             plugins: {
                 tooltip: {
                     callbacks: {
-                        label: context => addTooltipPercent(context)
-                        
+                        label: context => addTooltipPercent(context),
+                        title: context => formatDate(context[0].label)
+
                     }
                 },
             },
@@ -63,8 +64,8 @@ const chartMeta = {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: context => addTooltipPercent(context)
-                            
+                            label: context => addTooltipPercent(context),
+                            title: context => formatDate(context[0].label)
                         }
                     },
                 },
@@ -92,7 +93,8 @@ const chartMeta = {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: context => addTooltipCommas(context)
+                            label: context => addTooltipCommas(context),
+                            title: context => formatDate(context[0].label)
                         }
                     },
                 },
@@ -272,6 +274,11 @@ const makeEmploymentYearChart = (response, changeYears) => {
         phillyData.push(vals[phillyLabel][changeYears])
         trentonData.push(vals[trentonLabel][changeYears])
     })
+
+    // remove total nonfarm from each
+    labels.pop()
+    phillyData.pop()
+    trentonData.pop()
 
     const data = {
         labels,

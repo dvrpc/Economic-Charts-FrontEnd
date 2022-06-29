@@ -25,7 +25,7 @@
             background-color: white;
             border-radius: 5px;
             box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
-            padding: 5px;
+            padding: 10px;
         }
         .chart-title {
             text-align: center;
@@ -51,6 +51,7 @@
             border-left: none;
         }
         .table {
+            font-size: 0.75rem;
             margin: 0;
         }
         td {
@@ -102,19 +103,27 @@
 
     <hr />
 
-    <h2>DVRPC Region Economic Update – December 2021</h2>
+    <h2>DVRPC Region Economic Update</h2>
 
     <p>
-        In October, over-the-year employment increased by 88,800 jobs (3.2 percent) in the Philadelphia-Camden-Wilmington (Philadelphia) Metropolitan Statistical Area (MSA) and 10,300 jobs (3.8 percent) in the Trenton-Mercer County Area. Comparatively, national over-the-year employment increased by 3.9 percent. The largest employment percentage increase was in the <em>Leisure and Hospitality</em> industry for both areas: in the Philadelphia MSA, the industry added 23,100 jobs (+11.5 percent) and in Trenton, the industry added 1,500 jobs (+15.2 percent). The unemployment rate declined once again in both areas, going from 5.7 percent in September to 5.1 percent in the Philadelphia MSA and 5.1 percent in September to 4.4 percent in Trenton. This matches the trend nationally as the unemployment rate went from 4.6 percent in September to 4.3 percent in October. The inflation rate in the Philadelphia MSA is up 5.6 percent from last year, compared to 6.2 percent nationally. In October, the DVRPC region authorized 1,097 new housing units, resulting in 15,927 authorized new housing units in the region since January.
+        Over-the-year employment increased by 88,800 jobs (3.2 percent) in the Philadelphia-Camden-Wilmington (Philadelphia) Metropolitan Statistical Area (MSA) and 10,300 jobs (3.8 percent) in the Trenton-Mercer County Area. Comparatively, national over-the-year employment increased by 3.9 percent. The largest employment percentage increase was in the <em>Leisure and Hospitality</em> industry for both areas: in the Philadelphia MSA, the industry added 23,100 jobs (+11.5 percent) and in Trenton, the industry added 1,500 jobs (+15.2 percent).
     </p>
 
-    <small>hover over chart elements for specific values</small><br />
-    <small>toggle chart data by clicking legend icons</small>
-    <br />
-    <br />
+    <p>
+        The unemployment rate declined once again in both areas, going from 5.7 percent in September to 5.1 percent in the Philadelphia MSA and 5.1 percent in September to 4.4 percent in Trenton. This matches the trend nationally as the unemployment rate went from 4.6 percent in September to 4.3 percent in October.
+    </p>
+    
+    <p>
+        The inflation rate in the Philadelphia MSA is up 5.6 percent from last year, compared to 6.2 percent nationally. In October, the DVRPC region authorized 1,097 new housing units, resulting in 15,927 authorized new housing units in the region since January.
+    </p>
+
+    <small>Disclaimer: charts and figures updated daily</small>
+
+    <br>
+    <br>
 
     <div class="chart-wrapper">
-        <h3 class="chart-title">Over-the-Year Inflation Rate Philadelphia MSA and U.S.</h3>
+        <h3 class="chart-title">Over-the-Year Inflation Rate</h3>
         <canvas id="inflation-chart" class="chart"></canvas>
         <h4 class="chart-subtitle">Source: Bureau of Labor Statistics</h4>
     </div>
@@ -134,11 +143,14 @@
         <canvas id="housing-chart" class="chart"></canvas>
         <h4 class="chart-subtitle">Source: U.S. Census Bureau</h4>
     </div>
+    <small>
+        Note: <a href="https://www.axios.com/local/philadelphia/2022/01/07/philadelphia-tax-abatement-permit-applications" rel="external">a huge influx of permits in Philadelphia prior to the 10-year Tax Abatement changing led to an outlier in new housing units authorized for December 2021</a>
+    </small>
 
     <hr />
 
     <div class="chart-wrapper">
-        <h3 class="chart-title">Philadelphia and Trenton MSAs At-Place Employment by Industry Group,</h3>
+        <h3 class="chart-title">At-Place Employment by Industry Group,</h3>
 
         <div class="overflow">
             <table class="table">
@@ -177,10 +189,7 @@
 
     <hr />
 
-    <h2>Notes</h2>
-
-    <a href="./xls/EconomicUpdate_FigureData_20220105.xlsx">Download chart data</a>
-    
+    <h2>Notes</h2>    
     <h3>Geographies</h3>
     <p>Metropolitan Statistical Area (MSA): An MSA is an area with at least one urban core and 50,000 total inhabitants. Each MSA is made up of one or more counties. The Philadelphia-Camden-Wilmington MSA (Philadelphia MSA) is comprised of Bucks, Chester, Delaware, Montgomery, and Philadelphia County in Pennsylvania; Burlington, Camden, Gloucester, and Salem County in New Jersey; New Castle County in Delaware; and Cecil County in Maryland. The Trenton-Princeton MSA is comprised of Mercer County in New Jersey.</p>
     <p>Use of MSA instead of counties in region: depending on the data source and its variables, some data is not available at the county level. When this is the case, we use the MSA-level data as a proxy for the DVRPC region. Additionally, since the Trenton-Princeton MSA is relatively small, there are times where data is not available for this geography, and in those cases we only show the Philadelphia MSA data.</p>
