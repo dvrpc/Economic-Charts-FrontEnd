@@ -142,7 +142,8 @@ const makeInflationChart = response => {
     const usData = []
     const labels = []
 
-    response.sort((a, b) => a.period > b.period).forEach(data => {
+    // convoluted sort script because Chrome can't hang
+    response.sort((a, b) => +new Date(a.period) - +new Date (b.period)).forEach(data => {
         switch(data.area) {
             case 'Philadelphia MSA':
                 phillyData.push(data.rate)
@@ -186,7 +187,8 @@ const makeUnemploymentChart = response => {
     const trentonData = []
     const labels = []
 
-    response.sort((a, b) => a.period > b.period).forEach(data => {
+    // convoluted sort script because Chrome can't hang
+    response.sort((a, b) => +new Date(a.period) - +new Date (b.period)).forEach(data => {
         switch(data.area) {
             case 'Philadelphia MSA':
                 phillyData.push(data.rate)
